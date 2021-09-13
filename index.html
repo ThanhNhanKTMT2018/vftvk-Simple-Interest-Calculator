@@ -1,16 +1,47 @@
 <html>
-    <head>
+    <head lang="en">
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+        <form class="form_count">
+            <fieldset class="field">
+                    <div class="name">
+                        <h1>Simple Interest Calculator</h1>
+                    </div>
+                    <div class="info">
+                    <label for="amount" class="lb">Amount</label>
+                    <input type="number" id="amount" name="amount" min="0"><br><br>
+                    <label for="interest_rate" class="lb">Interest Rate</label>
+                    <input type="range" min="1" max="20" value="10" class="ir" id="ir" onchange="setValue()">
+                    <label id="percent">10%</label> <br><br>
+                    <label for="no_of_year" class="lb">No.of Years</label>
+                    <select name="no_of_year" id="no_of_year">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                    </select> <br> <br>
+                    <button type= "button" onclick="compute()">Compute Interest</button>
+                    <p id="p1" class="res">If you deposit <label id="deposit" class="val"></label>,</p>
+                    <p id="p2" class="res">at an interest rate <label id="rate" class="val"></label>.</p>
+                    <p id="p3" class="res">You will receive an amount of <label id="amountlb" class="val"></label>,</p>
+                    <p id="p4" class="res">In the year <label id="yearlb" class="val"></label>.</p>
+                    </div>
+                    <p><span>&copy;</span> Everyone Can Get Rich</p>
+            </fieldset>
+        </form>
+        
     </body>
 </html>
