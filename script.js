@@ -3,9 +3,14 @@ function compute()
     var amount = document.getElementById("amount");
     if (amount.value == "")
 		{
-			alert("Please enter yout amount");
+			alert("Please enter a possitive number");
 			amount.focus();
 		}
+	else if(parseInt(amount.value)<1)
+	{
+		alert("Amount must be a possitive number");
+		amount.focus();
+	}
 	else{
 		document.getElementById("p1").style.display = "block";
 		document.getElementById("p2").style.display = "block";
